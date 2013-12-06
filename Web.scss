@@ -1,0 +1,210 @@
+@import "compass/css3/box-sizing";
+@import "compass/utilities/general/clearfix";
+
+.webStandard { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: var(typo); }
+.webStandard strong { font-weight: bold; }
+.webStandard em { font-style: italic; }
+
+.webStandard p { line-height: 20px; color: var(typo); margin-bottom: 10px; }
+
+.webStandard h1 { font-size: 22px; margin-bottom: 5px; text-transform: uppercase; color: var(mainColor); font-family: 'Roboto'; font-weight: normal; } /* Überschrift 1 */
+.webStandard h2.headlineH2 { margin-top: 0px; font-size: 20px; }
+.webStandard h2 { font-size: 20px; margin-top: 15px; margin-bottom: 5px; color: var(mainColor); font-family: 'Roboto'; font-weight: normal; } /* Überschrift 2 */
+.webStandard h3 { font-size: 18px; margin-top: 15px; margin-bottom: 5px; font-weight: normal; } /* Überschrift 3 */
+.webStandard h4 { font-size: 16px; margin-top: 15px; margin-bottom: 5px; font-weight: normal; color: var(mainColor); } /* Überschrift 4 */
+.webStandard h5 { font-size: 14px; margin-top: 15px; margin-bottom: 5px; font-weight: normal; color: var(mainColor); } /* Überschrift 5 */
+
+.webStandard a { text-decoration: none; color: var(mainColor); outline: none; }
+.webStandard a:hover { text-decoration: none; color: var(secColor); }
+
+.webStandard ol { margin-bottom: 0px; margin-left: 0px; line-height: 18px; }
+.webStandard ul { margin-bottom: 0px; line-height: 18px; }
+.webStandard li { margin-bottom: 5px; color: var(typo); list-style-type: square; list-style-color: var(mainColor); }
+.webStandard ol li { list-style-type: decimal; }
+.webStandard ul li { list-style-type: square; }
+
+.webStandard.webForm button {
+    background: none repeat scroll 0 0 var(mainButton);
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    display: inline-block;
+}
+.webStandard.themeLinkButtonBig a:hover, .webStandard.themeLinkButtonFullWidth a:hover,
+.webStandard.webForm button:hover {
+    background-color: var(mainButtonHover);
+    color: white;
+}
+.webStandard {
+    div.kwfFormFieldDateField a.icon {
+        background: url('/assets/web/themes/Theme/images/datePicker.png');
+        width: 25px;
+        height: 27px;
+        right: 0px;
+    }
+    &.kwcForm .kwfField {
+        @include pie-clearfix;
+        margin-bottom: 5px;
+    }
+    &.kwcForm label {
+        @include box-sizing(border-box);
+        font-size: 14px;
+        padding: 4px;
+        display: inline-block;
+        .requiredSign {
+            display: none;
+        }
+    }
+    &.kwcForm input,
+    &.kwcForm textarea,
+    &.kwcForm select {
+        @include box-sizing(border-box);
+        font-size: 14px;
+        height: 28px;
+    }
+}
+/** HAS TO BE IN BODY TO OVERRIDE !important! **/
+
+$datePickerTextColor: #444444;
+$datePickerSelectedColor: #FFFFFF;
+$datePickerHoverColor:  #FFFFFF;
+$datePickerSelectedBackground: #4C9156;
+$datePickerHoverBackground: #4C9156;
+$datePickerBorderColor: #CCCCCC;
+
+
+body.frontend {
+    .x-date-middle, .x-date-left, .x-date-right {
+        background: none;
+    }
+    .x-date-left a {
+        background-image: url('/assets/web/themes/Theme/images/arrowDatepickerLeft.gif');
+    }
+    .x-date-right a {
+        background-image: url('/assets/web/themes/Theme/images/arrowDatepickerRight.gif');
+    }
+    .x-date-inner {
+        width: 100%;
+        a {
+            font-size: 12px;
+            padding: 4px 5px;
+        }
+    }
+    .x-date-inner th {
+        background: $datePickerSelectedBackground;
+        color: $datePickerSelectedColor;
+        font-weight: bold;
+        font-size: 13px;
+        border-bottom: none;
+    }
+
+    .x-date-bottom {
+        background: none;
+        border-top: 1px solid $datePickerBorderColor;
+    }
+
+    .x-date-inner .x-date-today a {
+        border: none;
+    }
+
+    .x-date-inner .x-date-selected a {
+        background: $datePickerSelectedBackground;
+        border: medium none;
+        color: $datePickerSelectedColor;
+        padding: 4px 5px;
+    }
+    .x-date-inner a:hover, .x-date-inner .x-date-disabled a:hover, td.x-date-mp-month a:hover, td.x-date-mp-year a:hover {
+        background: $datePickerHoverBackground;
+        color: $datePickerHoverColor;
+    }
+    
+    .x-date-selected a:hover {
+        color: $datePickerHoverColor;
+    }
+
+    td.x-date-mp-sep {
+        border-right: $datePickerSelectedBackground;
+    }
+
+    .x-date-mp-btns {
+        background: none;
+    }
+    
+    .x-btn button {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $datePickerTextColor;
+        text-shadow: 1px 0 white;
+        cursor: pointer;
+    }
+    .x-date-mp td {
+        font-size: 12px;
+    }
+
+    .x-date-mp-btns td {
+        border-top: 1px solid $datePickerBorderColor;
+    }
+    .x-date-mp-ybtn a.x-date-mp-prev {
+        background-position: 0 0;
+        background-image: url('/assets/web/themes/Theme/images/arrowDatepickerLeft.gif');
+    }
+
+    .x-date-mp-ybtn a.x-date-mp-next {
+        background-position: 0 0;
+        background-image: url('/assets/web/themes/Theme/images/arrowDatepickerRight.gif');
+    }
+
+    .x-date-mp-btns button {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border: medium none;
+        color: $datePickerTextColor;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    td.x-date-mp-sel a {
+        background: $datePickerSelectedBackground;
+        border: none;
+        padding: 4px 5px;
+        
+    }
+    .x-date-middle .x-btn .x-btn-text {
+        color: $datePickerTextColor;
+    }
+    .x-menu {
+        border: none;
+        padding: 0px;
+        box-shadow: 0 9px 14px -4px #333333;
+        border: 1px solid $datePickerBorderColor;
+    }
+    .x-date-picker {
+        background:none;
+        width: auto !important;
+
+        > table {
+            width: 220px !important;
+        }
+    }
+    .x-btn-left, .x-btn-right, .x-btn-center {
+        background: none;
+    }
+    td.x-date-mp-year.x-date-mp-sel a, td.x-date-mp-month.x-date-mp-sel a {
+        color: $datePickerSelectedColor;
+    }
+    td.x-date-mp-month a, td.x-date-mp-year a {
+        color: $datePickerTextColor;
+        padding: 4px 5px;
+    }
+
+    .x-date-middle .x-btn-with-menu .x-btn-center em {
+        background: url('/assets/web/themes/Theme/images/arrowDatepickerDown.gif');
+        background-repeat: no-repeat;
+        background-position: right 0;
+    }
+}

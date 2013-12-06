@@ -1,0 +1,13 @@
+@import "compass/utilities/general/clearfix";
+
+.cssClass {
+    @include pie-clearfix;
+    width: 100%;
+    display: inline-block;
+    a {
+      padding: 0;
+       display: inline-block;
+      width: 90%;
+      padding: 5%;
+    }
+}

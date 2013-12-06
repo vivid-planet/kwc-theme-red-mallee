@@ -1,0 +1,17 @@
+@import "kwf/form/label-top-input-all";
+@import "kwf/form/error/icon-bubble/error-simple";
+@import "compass/css3/box-sizing";
+
+.cssClass {
+    &.small {
+        &.veryNarrow {
+            @include label-top-input-all;
+            @include error-simple;
+        }
+
+        &.gt350 {
+            @include label-top-input-all;
+            @include error-simple;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.cssClass {
+  ul {
+    padding-bottom: 10px;
+    li {
+      margin: 10px 0;
+      border-bottom: 1px solid #DDDEDD;
+      padding-bottom: 10px;
+      a {
+        display: block;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: 'Roboto';
+      }
+      &.current {
+         > a {
+          color: var(secColor);
+        }
+      }
+    }
+  }
+}

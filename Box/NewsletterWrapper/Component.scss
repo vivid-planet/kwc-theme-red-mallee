@@ -1,0 +1,34 @@
+.cssClass {
+    width: 100%;
+    display:block;
+    margin-left: 0;
+    margin-bottom: 20px;
+    
+    button {
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        button.switchLink {
+            background: none repeat scroll 0 0 var(mainButton);
+            color: #FFFFFF;
+            font-family: 'Roboto';
+            font-size: 14px;
+            padding: 8px 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            border: none;
+            display: inline-block;
+            width: 100%;
+            cursor:pointer;
+            margin-bottom: 0;
+        }
+    }
+    div.kwfSwitchDisplay div.switchContent {
+        margin-left: 0;
+        border: 1px solid #CCCCCC;
+        padding: 0 4.5%;
+        width: 90%;
+    }
+}

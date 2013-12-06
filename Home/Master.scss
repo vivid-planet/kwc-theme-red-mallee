@@ -1,0 +1,90 @@
+@import "susy";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/box-sizing";
+
+$total-columns: 12;
+$column-width: 1100px / $total-columns;
+$gutter-width: 0px;
+$grid-padding: 0px;
+
+$container-style: magic;
+
+.cssClass {
+    #page {
+        #outerContent {
+            .teaser {
+                margin-top: 80px;
+            }
+            .laschenskyhofLinkButtonBig {
+                a {
+                    float: right;
+                }
+            }
+            position: relative;
+
+            @include at-breakpoint(6 no-mediaqueries) {
+                padding-top:450px;
+            }
+
+            #content {
+                background: #fff;
+                @include container;
+                @include box-sizing(border-box);
+                padding: 40px 20px;
+
+                .breadcrumbs {
+                    margin-left: 5px;
+                    @include at-breakpoint(8 no-mediaqueries) {
+                        @include prefix(2); /* NEEDS TO BE TESTED */
+                    }
+                }
+                #innerContent {
+
+                    @include at-breakpoint(6 no-mediaqueries) {
+                        margin-top: 0px;
+                    }
+
+                    .centerColumn {
+
+                        @include at-breakpoint(7 no-mediaqueries) {
+                            @include span-columns(3, $total-columns);
+                            @include box-sizing(border-box);
+                        }
+                        @include at-breakpoint(8 no-mediaqueries) {
+                            @include span-columns(4, $total-columns);
+                            @include box-sizing(border-box);
+                        }
+                        @include at-breakpoint(9 no-mediaqueries) {
+                            @include span-columns(5, $total-columns);
+                        }
+                        @include at-breakpoint(10 no-mediaqueries) {
+                            @include span-columns(6, $total-columns);
+                        }
+                    }
+
+                    .rightColumn {
+                        margin-top: 20px;
+                        @include at-breakpoint(7 no-mediaqueries) {
+                            width: 330px;
+                            float: right;
+                            @include box-sizing(border-box);
+                            padding: 0 10px 0 20px;
+                        }
+                        
+                        
+                    }
+                }
+            }
+            .teaserList {
+                background: #f3f2f2;
+
+                .innerTeaserList {
+                    max-width: 980px;
+                    margin: auto;
+                    background: #f3f2f2;
+                    padding: 40px 0 40px 0
+                }
+            }
+        }
+    }
+}

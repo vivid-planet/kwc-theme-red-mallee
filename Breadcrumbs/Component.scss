@@ -1,0 +1,26 @@
+@import "compass/css3/box-sizing";
+@import "kwf/background-image-dpr2";
+
+.cssClass {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.cssClass a {
+    color: #565a57;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 11px;
+}
+.cssClass .last {
+    color: #9ca09d;
+}
+.cssClass a:after {
+    content: '>';
+    background-repeat: no-repeat;
+    padding: 0px 8px;
+}
+.cssClass a.last:after {
+    color: #9ca09d;
+    background: none;
+    content: '';
+}

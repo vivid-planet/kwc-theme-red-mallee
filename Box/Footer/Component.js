@@ -1,0 +1,1 @@
+Kwf.Utils.ResponsiveEl('.themeBoxFooter', [1100, 960, 700, 659, 500]);

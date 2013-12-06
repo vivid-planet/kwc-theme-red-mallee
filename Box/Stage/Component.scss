@@ -1,0 +1,43 @@
+@import "compass/utilities/general/clearfix";
+
+.cssClass {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    
+    .listWrapper {
+        @include pie-clearfix;
+        width: 6000px;
+        position: relative;
+    }
+    a {
+        &.listSwitchPrevious {
+            width: 50px;
+            background: url('/assets/web/themes/Theme/images/arrowBigLeft.png') left center no-repeat;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 10px;
+        }
+        &.listSwitchNext {
+            background: url('/assets/web/themes/Theme/images/arrowBigRight.png') left center no-repeat;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            height: 100%;
+        }
+    }
+    .listItem {
+        float: left;
+    }
+    
+    &.fullwidth {
+        .listWrapper {
+            left: -1140px;
+        }
+        .listItem {
+            margin-left: 20px;
+        }
+    }
+}

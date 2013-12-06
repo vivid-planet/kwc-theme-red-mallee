@@ -1,0 +1,71 @@
+.cssClass {
+    top: 0px;
+    position: relative;
+    z-index: 15;
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+
+    &.webStandard {
+        position: relative;
+        z-index: 15;
+    }
+
+    ul {
+        line-height: 30px;
+        white-space: nowrap;
+        margin-left: 0px;
+        position: relative;
+        overflow-x: scroll;
+
+        li {
+            position: relative;
+            display: inline;
+            list-style: none;
+            color: white;
+            margin-right: -4px;
+            width: auto;
+
+            &.current a {
+                 color: var(dark);
+            }
+
+             a {
+                font-size: 12px;
+                padding: 0px 17px;
+                position: relative;
+                text-transform: uppercase;
+
+
+                 &:hover, &.current {
+                     color: var(dark);
+                 }
+                 &:first-child {
+                   padding-left: 10px;
+                 }
+             }
+        }
+    }
+
+    > a {
+        position: absolute;
+        display: block;
+        width: 62px;
+        height: 38px;
+        top: 0;
+
+        &.arrowLeft {
+            background: url("/assets/web/themes/Theme/images/subSubMenuArrowLeft.png") no-repeat scroll left -4px transparent;
+            left: 0;
+            z-index: 15;
+        }
+
+        &.arrowRight {
+            background: url("/assets/web/themes/Theme/images/subSubMenuArrowRight.png") no-repeat scroll left -4px transparent;
+            right: 0;
+            z-index: 15;
+        }
+    }
+}

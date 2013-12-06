@@ -1,0 +1,129 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+.cssClass {
+  &.gt500 {
+    ul {
+      li {
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  &.gt700 {
+    ul {
+      li {
+        float: left;
+      }
+    }
+  }
+  &.gt659 {
+    ul {
+      li {
+        &.current {
+          border: none;
+          border-bottom: 1px solid #ccc;
+          background: var(light);
+          z-index: 3;
+
+          &.hasSubmenu {
+            border: none;
+            ul {
+              .dropdown {
+                ul {
+                  border-top: 1px solid;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+  &.kwcMenuDropdown {
+    ul {
+      li {
+        .dropdown {
+          margin-top: -3px;
+          margin-left: 0;
+          z-index: 50;
+          display: none;
+          background: var(light);
+          @include single-box-shadow(rgba(0,0,0,0.7), 1px, 7px, 4px, -2px, false);
+          ul {
+            margin: 10px 0 0 0;
+            background: var(light);
+            min-width: 150px;
+
+            li {
+              @include box-sizing(border-box);
+              float: left;
+              width: 100%;
+              display: block;
+              a {
+                text-transform: uppercase;
+                color:var(selColor);
+                font-size: 12px;
+                font-famiy: 'Roboto';
+                font-weight: normal;
+                padding: 5px 10px;
+
+                &:hover {
+                  color: #000000;
+                }
+              }
+
+              &:hover {
+                a {
+                  color: #000000;
+                }
+              }
+
+              &.last {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          &.blocked {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      margin-bottom: 0px;
+      position: relative;
+      a {
+        font-size: 14px;
+        padding: 0 10px;
+        z-index: 2;
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        font-family: 'Roboto';
+        font-weight: 500;
+        &:hover {
+          color: #000000;
+
+        }
+      }
+      &.current >  a {
+        color: #000000;
+      }
+
+    }
+  }
+
+  &.webStandard ul.menu {
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+}
+

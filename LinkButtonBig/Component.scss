@@ -1,0 +1,18 @@
+//styling in Web.scss, da es auch für html buttons gilt
+@import "compass/utilities/general/clearfix";
+
+.cssClass {
+    @include pie-clearfix;
+    a {
+        background: none repeat scroll 0 0 var(mainButton);
+        color: #FFFFFF;
+        font-family: 'Roboto';
+        font-size: 14px;
+        padding: 12px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        display: inline-block;
+    }
+}
