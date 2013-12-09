@@ -42,7 +42,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'class' => 'Kwf_Component_Generator_Box_StaticSelect',
             'component' => array(
                 'empty' => 'Kwc_Basic_Empty_Component',
-                'newsletterSubscribe' => 'Theme_Box_NewsletterWrapper_Component',
+                'newsletterSubscribe' => 'Theme_Box_NewsletterSubscribe_Component',
              ),
              'inherit' => true,
               'boxName' => trlStatic('Newsletter Anmeldung')

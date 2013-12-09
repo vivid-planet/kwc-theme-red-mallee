@@ -1,5 +1,5 @@
 <?php
-class Theme_Box_NewsletterWrapper_NewsletterSubscribe_Component extends Kwc_NewsletterCategory_Subscribe_Component
+class Theme_Box_NewsletterSubscribe_Form_Component extends Kwc_NewsletterCategory_Subscribe_Component
 {
     public static function getSettings()
     {
@@ -7,7 +7,7 @@ class Theme_Box_NewsletterWrapper_NewsletterSubscribe_Component extends Kwc_News
         $ret['componentName'] = trlKwfStatic('Newsletter Anmeldung');
         $ret['componentIcon'] = new Kwf_Asset('link_add');
         $ret['cssClass'] = 'webStandard';
-        $ret['extConfig'] = 'Theme_Box_NewsletterWrapper_NewsletterSubscribe_ExtConfig';
+        $ret['extConfig'] = 'Theme_Box_NewsletterSubscribe_Form_ExtConfig';
         unset($ret['menuConfig']);
         $ret['cssClass'] = 'small';
 

@@ -1,5 +1,5 @@
 <?php
-class Theme_Box_NewsletterWrapper_NewsletterSubscribe_ExtConfig extends Kwc_NewsletterCategory_Subscribe_ExtConfig
+class Theme_Box_NewsletterSubscribe_Form_ExtConfig extends Kwc_NewsletterCategory_Subscribe_ExtConfig
 {
     protected function _getConfig()
     {
