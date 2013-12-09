@@ -32,7 +32,7 @@
                         <div class="mainMenu">
                             <?=$this->component($this->boxes['mainMenu']);?>
                         </div>
-                        <div class="languageSelect">
+                        <div class="rightHeaderBox languageSelect">
                             <?=$this->component($this->boxes['rightHeaderBox']);?>
                         </div>
                         <div class="verticalMenu">

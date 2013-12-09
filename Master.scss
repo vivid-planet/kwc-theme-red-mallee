@@ -42,28 +42,6 @@ html, body {
     filter: alpha(opacity = 70);
     transition: opacity 0.3s linear;
 }
-#outerHeader {
-    @include at-breakpoint(5 no-mediaqueries) {
-        position: fixed;
-        @include box-shadow;
-    }
-    position:relative;
-    display:block;
-    width: 100%;
-
-    .rightHeaderBox {
-        margin-top: 20px;
-        position: relative;
-        right: 0;
-        width: 100%;
-        display:none;
-        
-        @include at-breakpoint(5 no-mediaqueries) {
-            display:block;
-        }
-    }
-}
-
 
 body {
 
@@ -179,6 +157,18 @@ body {
                     }
                 }
             }
+            
+            .rightHeaderBox {
+                margin-top: 20px;
+                position: relative;
+                right: 0;
+                width: 100%;
+                display:none;
+
+                @include at-breakpoint(5 no-mediaqueries) {
+                    display:block;
+                }
+            }
 
             .rightBox {
                 position: relative;
@@ -249,15 +239,31 @@ body {
                         display: none;
                     }
                 }
-                .languageSelect {
-                    display: inline-block;
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    z-index: 10;
-                    
+
+                .rightHeaderBox {
+                    margin-top: 20px;
+                    position: relative;
+                    right: 0;
+                    width: 100%;
+                    display:none;
+
                     @include at-breakpoint(5 no-mediaqueries) {
-                        display:none;
+                        display:block;
+                    }
+
+                    &.languageSelect {
+                        display: inline-block;
+                        left: 0;
+                        margin-top: 0;
+                        position: absolute;
+                        right: inherit !important;
+                        top: 15px;
+                        width: auto;
+                        z-index: 10;
+
+                        @include at-breakpoint(5 no-mediaqueries) {
+                            display:none;
+                        }
                     }
                 }
             }
