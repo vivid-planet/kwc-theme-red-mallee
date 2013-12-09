@@ -44,29 +44,6 @@ html, body {
 }
 
 body {
-
-
-  table.standard {
-    border: 1px solid #CCCCCC;
-    padding: 10px;
-    background: none repeat scroll 0 0 #F6F6F6;
-    td {
-      border-top: 1px solid #CCCCCC;
-      line-height: 24px;
-      padding: 5px 0;
-    }
-  }
-
-  table.standard th {
-    font-size: 15px;
-    margin-bottom: 10px;
-    white-space: normal;
-  }
-
-  table.standard tr > td:first-child {
-    width: 180px;
-  }
-
     #page {
         @include at-breakpoint(5 no-mediaqueries) {
             #outerHeader.stick {
