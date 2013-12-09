@@ -2,21 +2,22 @@
     border: 1px solid #CCCCCC;
     padding: 10px;
     background: none repeat scroll 0 0 #F6F6F6;
-    
-    td {
-      border-top: 1px solid #CCCCCC;
-      line-height: 24px;
-      padding: 5px 0;
-    }
+    table.standard {
+        td {
+            border-top: 1px solid #CCCCCC;
+            line-height: 24px;
+            padding: 5px 0;
+        }
   
 
-    th {
-        font-size: 15px;
-        margin-bottom: 10px;
-        white-space: normal;
-    }
+        th {
+            font-size: 15px;
+            padding-bottom: 10px;
+            white-space: normal;
+        }
 
-    tr > td:first-child {
-        width: 180px;
+        tr > td:first-child {
+            width: 180px;
+        }    
     }
 }
