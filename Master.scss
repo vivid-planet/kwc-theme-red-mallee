@@ -25,6 +25,7 @@ html, body {
         display: block;
     }
 }
+
 #mask {
     height: 100%;
     width: 100%;
@@ -35,33 +36,32 @@ html, body {
     opacity: 0;
     filter: alpha(opacity = 0);
     transition: visibility 0s 0.3s, opacity 0.3s linear;
-}
-#mask.visible {
-    visibility: visible;
-    opacity: 0.7;
-    filter: alpha(opacity = 70);
-    transition: opacity 0.3s linear;
-}
 
-body {
-    #page {
-        @include at-breakpoint(5 no-mediaqueries) {
-            #outerHeader.stick {
-                background: var(light);
-                z-index: 50;
-                @include translate(0, -38px);
-                @include transition-property(all);
-                @include transition-duration(0.6s);
-            }
-            #outerHeader.revertStick {
-                @include translate(0, 0);
-                @include transition-property(all);
-                @include transition-duration(0.3s);
-            }
-        }
+    &.visible {
+        visibility: visible;
+        opacity: 0.7;
+        filter: alpha(opacity = 70);
+        transition: opacity 0.3s linear;
     }
 }
+
 #page {
+    
+    @include at-breakpoint(5 no-mediaqueries) {
+        #outerHeader.stick {
+            background: var(light);
+            z-index: 50;
+            @include translate(0, -38px);
+            @include transition-property(all);
+            @include transition-duration(0.6s);
+        }
+        #outerHeader.revertStick {
+            @include translate(0, 0);
+            @include transition-property(all);
+            @include transition-duration(0.3s);
+        }
+    }
+
     height: auto;
     min-height: 100%;
     position: relative;
@@ -72,6 +72,14 @@ body {
         background: var(light);
         min-height: 120px;
         z-index: 12;
+        position:relative;
+        display:block;
+        width: 100%;
+
+        @include at-breakpoint(5 no-mediaqueries) {
+            position: fixed;
+            @include box-shadow;
+        }
 
         @include at-breakpoint(8 no-mediaqueries) {
             margin-bottom: 35px;
@@ -134,7 +142,7 @@ body {
                     }
                 }
             }
-            
+
             .rightHeaderBox {
                 margin-top: 20px;
                 position: relative;
@@ -149,7 +157,7 @@ body {
 
             .rightBox {
                 position: relative;
-                
+
                 @include at-breakpoint(8 no-mediaqueries) {
                     padding-top: 75px;
                 }
@@ -254,20 +262,6 @@ body {
             }
         }
     }
-    .stagePos {
-        width: 100%;
-        height: 299px;
-        background: red;
-    }
-    .stage {
-/*         overflow: hidden; */
-
-/*            .innerStage {
-                margin: auto;
-                position: relative;
-                width: 1920px;
-            }*/
-    }
 
     #outerContent {
 
@@ -282,8 +276,6 @@ body {
         }
 
         #content {
-
-
             .kwcAdvancedGoogleMapView .fromAddress input {
                 width: 98%;
                 @include at-breakpoint(5 no-mediaqueries) {
@@ -330,14 +322,14 @@ body {
 
                 .leftColumn {
                     .themeMenuSub { display:none };
-                    
+
                     div.kwfSwitchDisplay div.switchContent {
                         margin-left: 0;
                         border: 1px solid #CCCCCC;
                         padding: 0 4.5%;
                         width: 90%;
                     }
-                    
+
                     @include at-breakpoint(8 no-mediaqueries) {
                         @include span-columns(2, $total-columns);
                         @include box-sizing(border-box);
@@ -480,8 +472,4 @@ body {
             }
         }
     }
-}
-
-.kwcColumns > div.column {
-    margin-right: 30px;
 }
