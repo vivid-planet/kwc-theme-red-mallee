@@ -43,7 +43,6 @@
         margin-bottom: 0;
       }
     }
-
   }
   &.kwcMenuDropdown {
     ul {
@@ -96,6 +95,7 @@
       }
     }
   }
+  
   ul {
     li {
       margin-bottom: 0px;
@@ -117,7 +117,18 @@
       &.current >  a {
         color: #000000;
       }
-
+      &.last {
+        a {
+            padding: 0 0 0 10px;
+        }
+      }
+      ul li {
+        &.last {
+          a {
+             padding: 5px 10px;
+          }
+        }
+      }
     }
   }
 
@@ -126,4 +137,3 @@
     margin-left: 0px;
   }
 }
-
