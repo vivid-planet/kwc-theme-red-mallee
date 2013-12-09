@@ -14,19 +14,19 @@ Kwf.Utils.ResponsiveEl('.themeBoxStage', function(el) {
     }, this);
 });
 Ext.namespace("Theme.Box.Stage");
-Laschenskyhof.Box.Stage.Component = Ext.extend(Kwf.EyeCandy.List, {
+Theme.Box.Stage.Component = Ext.extend(Kwf.EyeCandy.List, {
     childSelector: '.listItem',
     _activeChangeLocked: false,
     _init: function() {
         this.plugins = [
-            new Laschenskyhof.Box.Stage.Carousel({
+            new Theme.Box.Stage.Carousel({
                 numberShown: 3,
                 moveElementSelector: '.listWrapper'
             }),
-            new Laschenskyhof.Box.Stage.NextPreviousLinks()
+            new Theme.Box.Stage.NextPreviousLinks()
         ];
 
-        Laschenskyhof.Box.Stage.Component.superclass._init.call(this);
+        Theme.Box.Stage.Component.superclass._init.call(this);
     },
     getActiveChangeLocked: function() {
         return this._activeChangeLocked;
@@ -37,7 +37,7 @@ Laschenskyhof.Box.Stage.Component = Ext.extend(Kwf.EyeCandy.List, {
 });
 
 Kwf.onElementReady('.themeBoxStage', function(el){
-    var stage = new Laschenskyhof.Box.Stage.Component({
+    var stage = new Theme.Box.Stage.Component({
         el: el
     });
     

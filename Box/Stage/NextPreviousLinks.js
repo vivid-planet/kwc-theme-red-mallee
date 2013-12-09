@@ -1,5 +1,5 @@
 Ext.namespace("Theme.Box.Stage");
-Laschenskyhof.Box.Stage.NextPreviousLinks = Ext.extend(Kwf.EyeCandy.List.Plugins.ActiveChanger.NextPreviousLinks, {
+Theme.Box.Stage.NextPreviousLinks = Ext.extend(Kwf.EyeCandy.List.Plugins.ActiveChanger.NextPreviousLinks, {
     onPrevious: function() {
         if (!this.list.getActiveChangeLocked()) {
             var item;

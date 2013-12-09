@@ -1,5 +1,5 @@
 Ext.namespace("Theme.Box.Stage");
-Laschenskyhof.Box.Stage.Carousel = Ext.extend(Kwf.EyeCandy.List.Plugins.Abstract, {
+Theme.Box.Stage.Carousel = Ext.extend(Kwf.EyeCandy.List.Plugins.Abstract, {
     numberShown: 5,
     //animationConfig: { duration: 0.25 },
     //fadeAnimationConfig: { duration: 0.25 }, //optional, by default animationConfig will be used
