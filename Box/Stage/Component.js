@@ -1,17 +1,14 @@
 Kwf.Utils.ResponsiveEl('.themeBoxStage', [{minWidth: 1099, cls: 'fullwidth'}]);
 Kwf.Utils.ResponsiveEl('.themeBoxStage', function(el) {
     var listWrapper = el.child('.listWrapper');
-    el.query('.listItem').each(function(listItem){
-        listItem = Ext.get(listItem);
-        if (el.getWidth() < 1100) {
-            listItem.setWidth(el.getWidth());
-            var invertedWidth = el.getWidth() * -1;
-            listWrapper.setLeft(invertedWidth);
-        } else {
-            listWrapper.setLeft(-1140);
-            listItem.setWidth(el.getWidth());
-        }
-    }, this);
+    if (el.getWidth() < 1100) {
+        el.select('.listItem').setWidth(el.getWidth());
+        var invertedWidth = el.getWidth() * -1;
+        listWrapper.setLeft(invertedWidth);
+    } else {
+        listWrapper.setLeft(-1140);
+        el.select('.listItem').setWidth(el.getWidth());
+    }
 });
 Ext.namespace("Theme.Box.Stage");
 Theme.Box.Stage.Component = Ext.extend(Kwf.EyeCandy.List, {
