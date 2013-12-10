@@ -1,15 +1,20 @@
 $(function(){
     // DOM NODE TO LISTEN TO
-    var switchLanguage = $(document).find('.switchLanguage');
+    var header = $(document).find('#header > .rightHeaderBox');
 
-    if(switchLanguage && switchLanguage.length) {
-        var listenerPoint = $(switchLanguage).offset().top;
+    if(header && header.length) {
+        var listenerPoint = $(header).offset().top;
         $(window).on('scroll touchmove', function(event){
-            if($(window).scrollTop() > listenerPoint && $(window).width() > 1085) {
+            if($(window).scrollTop() > $(header).height() && $(window).width() > 1085) {
                 $('#outerHeader').removeClass('revertStick').addClass('stick');
             } else {
                 $('#outerHeader').removeClass('stick').addClass('revertStick');
             }
         })
+        setTimeout(function(){
+            if($(window).scrollTop() > $(header).height()) {
+                $('#outerHeader').removeClass('revertStick').addClass('stick');
+            }
+        }, 300);
     }
 })
