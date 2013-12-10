@@ -5,7 +5,7 @@ $(function(){
     if(header && header.length) {
         var listenerPoint = $(header).offset().top;
         $(window).on('scroll touchmove', function(event){
-            if($(window).scrollTop() > $(header).height() && $(window).width() > 1085) {
+            if($(window).scrollTop() > $(header).height() && $(window).width() > 550) {
                 $('#outerHeader').removeClass('revertStick').addClass('stick');
             } else {
                 $('#outerHeader').removeClass('stick').addClass('revertStick');
