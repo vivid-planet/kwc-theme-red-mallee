@@ -143,6 +143,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
        
         $ret['editComponents'] = array('title', 'metaTags', 'logo', 'background', 'footerImage', 'mobileStage', 'stage', 'teaserBelowContent', 'rightBox', 'newsletterSubscribe');
 
+        $ret['assets']['files'][] = 'web/themes/Theme/Web.css';
         $ret['assets']['files'][] = 'web/themes/Theme/Master.scss';
         $ret['assets']['files'][] = 'web/themes/Theme/Web.scss';
         $ret['assets']['dep'][] = 'jQuery';
