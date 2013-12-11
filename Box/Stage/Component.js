@@ -1,4 +1,4 @@
-Kwf.Utils.ResponsiveEl('.themeBoxStage', [{minWidth: 1099, cls: 'fullwidth'}]);
+Kwf.Utils.ResponsiveEl('.themeBoxStage', [600, {minWidth: 1099, cls: 'fullwidth'}]);
 Kwf.Utils.ResponsiveEl('.themeBoxStage', function(el) {
     var listWrapper = el.child('.listWrapper');
     if (el.getWidth() < 1100) {

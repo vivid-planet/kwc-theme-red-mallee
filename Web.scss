@@ -1,6 +1,10 @@
 @import "compass/css3/box-sizing";
 @import "compass/utilities/general/clearfix";
 
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+    -webkit-text-size-adjust:none;
+}
+
 .webStandard.webForm button {
     background: none repeat scroll 0 0 var(mainButton);
     color: #FFFFFF;
