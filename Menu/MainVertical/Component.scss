@@ -15,7 +15,7 @@ $container-style: magic;
 
     > a.showMenu {
         display: block;
-        position: relative;
+        position: absolute;
         line-height: 40px;
         margin-left: 5px;
         border-top: none;
@@ -23,7 +23,8 @@ $container-style: magic;
         color: #00540C;
         float: right;
         width: 52px;
-        z-index: 1;
+        z-index: 10;
+        right: 0;
         top: 0px;
         font-family: 'Roboto';
         text-transform: uppercase;
@@ -43,11 +44,12 @@ $container-style: magic;
 
     > .slider {
         position: relative;
-        padding-bottom: 20px;
+        
         > ul {
             overflow: hidden;
             clear: left;
-
+            padding-bottom: 20px;
+            
             > li {
                 > .subMenu {
                     top:50px;
@@ -68,7 +70,7 @@ $container-style: magic;
 
             li {
                 @include box-sizing(border-box);
-                padding: 0 15px 0 15px;
+                padding: 0 10px;
                 position: relative;
                 line-height: 40px;
                 display: block;
@@ -101,6 +103,7 @@ $container-style: magic;
                 }
 
                 &.last {
+                    padding-bottom: 30px;
                     a {
                         border: none;
                     }
