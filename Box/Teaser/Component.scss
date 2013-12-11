@@ -4,8 +4,4 @@
 .cssClass {
     @include box-sizing(border-box);
     padding: 0 5px;
-
-    div.kwcBasicImageEnlarge a .outerHoverIcon {
-        box-shadow: 0 0 57px 1px #000000 inset;
-    }
 }
