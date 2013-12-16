@@ -5,7 +5,6 @@
 .webStandard p { line-height: 20px; color: var(typo); margin-bottom: 10px; }
 
 .webStandard h1 { font-size: 22px; margin-bottom: 5px; text-transform: uppercase; color: var(mainColor); font-family: 'Roboto'; font-weight: normal; } /* Überschrift 1 */
-.webStandard h2.headlineH2 { margin-top: 0px; font-size: 20px; }
 .webStandard h2 { font-size: 20px; margin-top: 15px; margin-bottom: 5px; color: var(mainColor); font-family: 'Roboto'; font-weight: normal; } /* Überschrift 2 */
 .webStandard h3 { font-size: 18px; margin-top: 15px; margin-bottom: 5px; font-weight: normal; } /* Überschrift 3 */
 .webStandard h4 { font-size: 16px; margin-top: 15px; margin-bottom: 5px; font-weight: normal; color: var(mainColor); } /* Überschrift 4 */
