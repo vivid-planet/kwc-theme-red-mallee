@@ -60,7 +60,7 @@
                     <div id="innerContent">
                         <div class="leftColumn">
                             <?=$this->component($this->boxes['subMenu']);?>
-                            <?=$this->component($this->boxes['newsletterSubscribe']);?>
+                            <?=$this->component($this->boxes['leftColumnBox']);?>
                         </div>
                         <div class="centerColumn<? if(!$this->hasContent($this->boxes['subMenu'])) { ?> noSubMenu<? } ?>">
                             <?=$this->componentWithMaster($this->componentWithMaster);?>

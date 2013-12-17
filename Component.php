@@ -38,17 +38,14 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'unique' => true
         );
 
-        $ret['generators']['newsletterSubscribe'] = array(
-            'class' => 'Kwf_Component_Generator_Box_StaticSelect',
-            'component' => array(
-                'empty' => 'Kwc_Basic_Empty_Component',
-                'newsletterSubscribe' => 'Theme_Box_NewsletterSubscribe_Component',
-             ),
-             'inherit' => true,
-              'boxName' => trlStatic('Newsletter Anmeldung')
+        $ret['generators']['rightHeaderBox'] = array(
+            'class' => 'Kwf_Component_Generator_Box_Static',
+            'component' => 'Kwc_Basic_Empty_Component',
+            'unique' => true,
+            'inherit' => true
         );
         
-        $ret['generators']['rightHeaderBox'] = array(
+        $ret['generators']['leftColumnBox'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
             'component' => 'Kwc_Basic_Empty_Component',
             'unique' => true,
