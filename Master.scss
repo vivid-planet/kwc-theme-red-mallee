@@ -274,6 +274,10 @@ html, body {
         @include at-breakpoint(8 no-mediaqueries) {
             padding-top: 145px;
         }
+        
+        .kwcBasicLine {
+            border-bottom: 1px solid #ebebeb;
+        }
 
         #content {
             .kwcAdvancedGoogleMapView .fromAddress input {
