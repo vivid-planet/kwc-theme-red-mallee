@@ -280,27 +280,6 @@ html, body {
         }
 
         #content {
-            .kwcAdvancedGoogleMapView .fromAddress input {
-                width: 98%;
-                @include at-breakpoint(5 no-mediaqueries) {
-                    width: 50%;
-                    display: block;
-                }
-            }
-
-            .kwcAdvancedGoogleMapView .fromAddress button {
-                width: 100%;
-                margin: 10px 0;
-                float:left;
-                padding: 8px 5px;
-                @include at-breakpoint(5 no-mediaqueries) {
-                    width: auto;
-                    display: block;
-                    margin: 0;
-                    float:right;
-                    padding: 0 5px;
-                }
-            }
 
             background: #fff;
             @include container;
