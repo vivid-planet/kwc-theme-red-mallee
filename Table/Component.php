@@ -1,5 +1,5 @@
 <?php
-class Theme_PriceTable_Component extends Kwc_Basic_Table_Component
+class Theme_Table_Component extends Kwc_Basic_Table_Component
 {
     public static function getSettings()
     {

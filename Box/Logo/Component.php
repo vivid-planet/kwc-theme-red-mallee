@@ -5,8 +5,6 @@ class Theme_Box_Logo_Component extends Kwc_Basic_Image_Component
     {
         $ret = parent::getSettings();
         $ret['componentName'] = trlKwfStatic('Logo');
-        $ret['assets']['files'][] = 'web/themes/Theme/Box/Logo/Component.js';
-        $ret['assets']['dep'][] = 'KwfResponsiveEl';
         $ret['dimensions'] = array(
             'customcrop'=>array(
                 'text' => trlKwf('user-defined'),

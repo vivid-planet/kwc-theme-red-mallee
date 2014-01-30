@@ -1,3 +1,18 @@
+<?
+    // Make class regarding boxes .. todo: place this into component.php not here
+    $contentClass = 'oneColumn';
+    $leftColumn =  ($this->hasContent($this->boxes['subMenu']) || $this->hasContent($this->boxes['leftColumnBox'])) ? true : false;
+    $rightColumn = $this->hasContent($this->boxes['rightBox']) ? true : false;
+
+    if ($leftColumn && $rightColumn) {
+        $contentClass = 'threeColumns';
+    } else if ($leftColumn && !$rightColumn) {
+        $contentClass = 'twoColumnsLeft';
+    } else if (!$leftColumn && $rightColumn) {
+        $contentClass = 'twoColumnsRight';
+    }
+?>
+
 <?=$this->doctype('XHTML1_STRICT');?>
 <!--[if lt IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" class="no-mediaqueries"> <![endif]-->
 <!-- [if !(lt IE 9)]> -->
@@ -5,10 +20,6 @@
 <!-- <![endif] -->
     <head>
         <?=$this->includeCode('header')?>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-        <script type="text/javascript" src="/assets/jquerySelectivizr/selectivizr.min.js"></script>
-        <![endif]-->
-        <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/245016a6-66c1-4998-9b9c-874900361e1f.css"/>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,100,500' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     </head>
@@ -16,8 +27,7 @@
         <div id="outerBg">
             <?=$this->component($this->boxes['background']);?>
         </div>
-        <div id="mask"></div>
-        <div id="page">
+        <div id="page" class="<? if($this->hasContent($this->boxes['background'])) { ?>hasBackground<? } ?>">
             <div id="outerHeader">
                 <div id="header">
                     <div class="rightHeaderBox">
@@ -40,9 +50,7 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
                     <div class="subMenus">
-                        <div class="menuMask"></div>
                         <div class="subMenuHorizontal">
                             <?=$this->component($this->boxes['subMenuHorizontal']);?>
                         </div>
@@ -57,13 +65,16 @@
                     <?=$this->component($this->boxes['stage']);?>
                 </div>
                 <div id="content">
-                    <div id="innerContent">
+                    <div id="innerContent" class="<?=$contentClass?>">
                         <div class="leftColumn">
                             <?=$this->component($this->boxes['subMenu']);?>
                             <?=$this->component($this->boxes['leftColumnBox']);?>
                         </div>
-                        <div class="centerColumn<? if(!$this->hasContent($this->boxes['subMenu'])) { ?> noSubMenu<? } ?>">
+                        <div class="centerColumn">
                             <?=$this->componentWithMaster($this->componentWithMaster);?>
+                        </div>
+                        <div class="rightColumn">
+                            <?=$this->component($this->boxes['rightBox']);?>
                         </div>
                     </div>
                 </div>

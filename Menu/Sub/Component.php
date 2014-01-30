@@ -12,14 +12,4 @@ class Theme_Menu_Sub_Component extends Kwc_Menu_Component
         );
         return $ret;
     }
-    protected function _getMenuData($parentData = null, $select = array())
-    {
-        $ret = parent::_getMenuData($parentData, $select);
-        foreach ($ret as $k=>$i) {
-            if (count($ret[$k]['data']->getChildPages(array('showInMenu'=>true))) > 0) {
-                $ret[$k]['class'] .= ' hasSubmenu';
-            }
-        }
-        return $ret;
-    }
 }

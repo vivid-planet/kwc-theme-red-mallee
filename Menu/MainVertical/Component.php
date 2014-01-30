@@ -5,6 +5,7 @@ class Theme_Menu_MainVertical_Component extends Kwc_Menu_Mobile_Component
     {
         $ret = parent::getSettings();
         $ret['level'] = array('main', 'top');
+        $ret['cssClass'] .= ' default';
         return $ret;
     }
 }

@@ -1,1 +1,0 @@
-Kwf.Utils.ResponsiveEl('.themeBoxLogo', [500]);

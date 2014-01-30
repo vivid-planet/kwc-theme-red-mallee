@@ -2,55 +2,16 @@
 
 .cssClass {
     max-width: 1100px;
-    margin: auto;
-    position: relative;
-
-    .listWrapper {
-        @include pie-clearfix;
-        width: 6000px;
-        position: relative;
-    }
     a {
         &.listSwitchPrevious {
             width: 50px;
             background: url('/assets/web/themes/Theme/images/arrowBigLeft.png') left center no-repeat;
             background-size: 40%;
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 10px;
         }
         &.listSwitchNext {
             width: 50px;
             background: url('/assets/web/themes/Theme/images/arrowBigRight.png') right center no-repeat;
             background-size: 40%;
-            position: absolute;
-            height: 100%;
-            top: 0;
-            right: 10px;
-        }
-    }
-    .listItem {
-        float: left;
-    }
-    
-    &.fullwidth {
-        .listWrapper {
-            left: -1140px;
-        }
-        .listItem {
-            margin-left: 20px;
-        }
-    }
-
-    &.gt600 {
-        > a {
-            &.listSwitchPrevious {
-                background-size: 100%;
-            }
-            &.listSwitchNext {
-                background-size: 100%;
-            }
         }
     }
 }

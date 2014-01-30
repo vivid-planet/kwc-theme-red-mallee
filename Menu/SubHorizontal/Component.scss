@@ -1,69 +1,13 @@
 .cssClass {
-  display: none;
-  height: 30px;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: none;
-  top: 0px;
   border-top: 1px solid #ccc;
-  position: relative;
-  float: right;
-  margin-top: 0 auto;
-
-    ul {
-        position: relative;
-        float: left;
-
-        li {
-        position: relative;
-        z-index: 0;
-        padding: 0px;
-        float: left;
-        margin: 0px 10px;
-
-            a {
-                position: relative;
-                z-index: 15;
-                position: relative;
-                display: block;
-                text-transform: uppercase;
-                vertical-align: middle;
-                line-height: 30px;
-                font-size: 12px;
-
-                &:hover {
-                    color: #717171;
-                }
-            }
-            &.current a,
-            a:hover {
-                color: #717171;
-            }
-        }
-    }
 
     > a {
-        position: absolute;
-        display: block;
-        width: 62px;
-        height: 38px;
-        top: 0;
-        
         &.arrowLeft {
             background: url("/assets/web/themes/Theme/images/subMenuArrowLeft.png") no-repeat scroll left -4px transparent;
-            left: 0;
-            z-index: 15;
         }
         
         &.arrowRight {
             background: url("/assets/web/themes/Theme/images/subMenuArrowRight.png") no-repeat scroll left -4px transparent;
-            right: 0;
-            z-index: 15;
         }
-    }
-
-    .dropdown {
-        display: block;
-        bottom: -19px;
     }
 }

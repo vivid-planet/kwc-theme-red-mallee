@@ -5,7 +5,6 @@ class Theme_Box_MobileStage_Component extends Kwc_Basic_Image_Component
     {
         $ret = parent::getSettings();
         $ret['componentName'] = trlKwfStatic('Mobile Stage');
-        $ret['assets']['files'][] = 'web/themes/Theme/Box/Logo/Component.js';
         $ret['dimensions'] = array(
             'fullWidth'=>array(
                 'text' => trlKwf('full width'),

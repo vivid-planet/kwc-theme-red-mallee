@@ -7,6 +7,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
         $ret['componentName'] = 'Theme';
         $ret['flags']['resetMaster'] = true;
         $ret['contentWidth'] = 1100;
+        $ret['classFile'] = 'testClass';
         return $ret;
     }
 
@@ -44,14 +45,14 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'unique' => true,
             'inherit' => true
         );
-        
+
         $ret['generators']['leftColumnBox'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
-            'component' => 'Kwc_Basic_Empty_Component',
+            'component' => 'Kwc_Basic_None_Component',
             'unique' => true,
             'inherit' => true
         );
-        
+
         $ret['generators']['footerImage'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
             'component' => array(
@@ -66,11 +67,6 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'component' => 'Kwc_Box_TitleEditable_Component',
             'inherit' => true,
         );
-        $ret['generators']['breadcrumbs'] = array(
-            'class' => 'Kwf_Component_Generator_Box_Static',
-            'component' => 'Theme_Breadcrumbs_Component',
-            'inherit' => true,
-        );
         $ret['generators']['openGraph'] = array(
             'class' => 'Kwf_Component_Generator_Box_StaticSelect',
             'component' => array(
@@ -81,30 +77,18 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'boxName' => 'Open Graph'
         );
 
-        $ret['generators']['searchBox'] = array(
-            'class' => 'Kwf_Component_Generator_Box_Static',
-            'component' => 'Theme_FulltextSearch_Box_Component',
-            'unique' => true,
-            'inherit' => true
-        );
         $ret['generators']['rightBox'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
-            'component' => 'Kwc_Basic_Empty_Component',
+            'component' => 'Kwc_Basic_None_Component',
             'unique' => true,
             'inherit' => true
-        );
-
-        $ret['generators']['search'] = array(
-            'class' => 'Kwf_Component_Generator_Page_Static',
-            'component' => 'Theme_FulltextSearch_Search_Directory_Component',
-            'name' => trlStatic('Suche')
         );
 
         $ret['generators']['background'] = array(
             'class' => 'Kwf_Component_Generator_Box_StaticSelect',
             'component' => array(
                 'parentContent' => 'Kwc_Basic_ParentContent_Component',
-                'background'        => 'Theme_Box_BackgroundImage_Component',
+                'background'        => 'Kwc_Box_BackgroundImage_Component',
             ),
             'inherit' => true,
             'boxName' => trlStatic('Hintergrundbild')
@@ -127,7 +111,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'inherit' => true,
             'boxName' => trlStatic('Stage')
         );
-        
+
         $ret['generators']['teaserBelowContent'] = array(
             'class' => 'Kwf_Component_Generator_Box_StaticSelect',
             'component' => array(
@@ -137,14 +121,15 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'inherit' => true,
             'boxName' => trlStatic('Teaser unter Content')
         );
-       
+
         $ret['editComponents'] = array('title', 'metaTags', 'logo', 'background', 'footerImage', 'mobileStage', 'stage', 'teaserBelowContent', 'rightBox', 'newsletterSubscribe');
 
         $ret['assets']['files'][] = 'web/themes/Theme/Web.css';
         $ret['assets']['files'][] = 'web/themes/Theme/Master.scss';
         $ret['assets']['files'][] = 'web/themes/Theme/Web.scss';
-        $ret['assets']['dep'][] = 'jQuery';
-        $ret['assets']['files'][] = 'web/themes/Theme/js/stickyHeader.js';
+        $ret['assets']['dep'][] = 'KwfStickyHeader';
+        $ret['assets']['dep'][] = 'Socket';
+        $ret['assets']['files'][] = 'web/themes/Theme/Master.js';
         return $ret;
     }
 }
