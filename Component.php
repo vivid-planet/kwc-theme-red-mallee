@@ -122,7 +122,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
             'boxName' => trlStatic('Teaser unter Content')
         );
 
-        $ret['editComponents'] = array('title', 'metaTags', 'logo', 'background', 'footerImage', 'mobileStage', 'stage', 'teaserBelowContent', 'rightBox', 'newsletterSubscribe');
+        $ret['editComponents'] = array('title', 'metaTags', 'logo', 'openGraph', 'leftColumnBox', 'background', 'footerImage', 'mobileStage', 'stage', 'teaserBelowContent', 'rightBox', 'newsletterSubscribe');
 
         $ret['assets']['files'][] = 'web/themes/Theme/Web.css';
         $ret['assets']['files'][] = 'web/themes/Theme/Master.scss';
