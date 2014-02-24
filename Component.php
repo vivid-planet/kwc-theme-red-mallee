@@ -6,7 +6,6 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
         $ret = parent::getSettings();
         $ret['componentName'] = 'Theme';
         $ret['flags']['resetMaster'] = true;
-        $ret['contentWidth'] = 1100;
         $ret['classFile'] = 'testClass';
         return $ret;
     }
@@ -15,6 +14,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
     {
         $ret = array();
         $ret['masterTemplate'] = 'themes/Theme/Master.tpl';
+        $ret['contentWidth'] = 1100;
 
         $ret['generators']['box'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
