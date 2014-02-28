@@ -15,6 +15,8 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
         $ret = array();
         $ret['masterTemplate'] = 'themes/Theme/Master.tpl';
         $ret['contentWidth'] = 1100;
+        $ret['contentWidthBoxSubtract'] = array('subMenu' => 282);
+        $ret['flags']['resetMaster'] = true;
 
         $ret['generators']['box'] = array(
             'class' => 'Kwf_Component_Generator_Box_Static',
