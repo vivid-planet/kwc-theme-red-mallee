@@ -19,7 +19,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         &:hover {
             background: var(mainButtonHover);
-            color: var(mainButtonHoverText);
+            color: var(mainButtonTextHover);
         }
     }
 }
@@ -97,4 +97,7 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
     }
+}
+.showHoverIcon.kwcBasicImageEnlarge a .outerHoverIcon {
+    display: none !important;
 }
