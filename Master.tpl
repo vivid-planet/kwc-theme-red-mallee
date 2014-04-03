@@ -67,8 +67,8 @@
                 <div id="content">
                     <div id="innerContent" class="<?=$contentClass?>">
                         <div class="leftColumn">
-                            <?=$this->component($this->boxes['subMenu']);?>
                             <?=$this->component($this->boxes['leftColumnBox']);?>
+                            <?=$this->component($this->boxes['subMenu']);?>
                         </div>
                         <div class="centerColumn">
                             <?=$this->componentWithMaster($this->componentWithMaster);?>
