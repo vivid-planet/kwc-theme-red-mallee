@@ -1,0 +1,22 @@
+.cssClass {
+    a { 
+        position: relative;
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        text-decoration: none; 
+        color: var(mainColor); 
+        outline: none; 
+        padding-left: 14px;
+        line-height: 18px;
+        &:hover {
+            text-decoration: none; 
+            color: var(secColor);
+        }
+        &:before {
+            content: url('/assets/web/images/arrowLink.png');
+            position: absolute;
+            left: 0;
+        }
+
+    }
+}
