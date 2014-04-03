@@ -74,7 +74,13 @@ html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
         height: 28px;
     }
-    
+
+    &.kwcForm {
+        input, textarea, select {
+            font-size: 12px;
+        }
+    }
+
     .kwcForm.default.gt500 .kwfFormContainerAbstract > .kwfFormFieldWrapper {
         display: block;
     }
