@@ -3,6 +3,7 @@
 
 .cssClass {
     @include pie-clearfix;
+    margin-bottom: 10px;
     a {
         background: none repeat scroll 0 0 var(mainButton);
         color: #FFFFFF;
