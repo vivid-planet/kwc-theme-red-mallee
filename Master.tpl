@@ -100,7 +100,7 @@
                         <?=$this->image('/assets/web/themes/Theme/images/reference3.jpg', 'reference', 'referenceItem'); ?>
                     </div>
                     <div class="facebook">
-                        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FLaschensky%2F192010854169157%3Ffref%3Dts&amp;width=250&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
+                        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FLaschensky%2F192010854169157%3Ffref%3Dts&amp;width=290&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:290px; height:80px;" allowTransparency="true"></iframe>
                     </div>
                 </div>
             </div>
