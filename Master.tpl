@@ -82,23 +82,8 @@
                 </div>
             </div>
             <div id="outerFooter">
-                <div id="footer">
-                    <div class="topFooter">
-                        <div class="text">
-                            <p class="webStandard">HOTEL RESTAURANT LASCHENSKYHOF    Josef-Hauthaler-Str. 2     5071 Wals     Tel: +43 662 85 23 61     <a href="mailto:info@laschenskyhof.at">info@laschenskyhof.at</a></p> 
-                        </div>
-                        <div class="bottomMenu">
-                                <?=$this->component($this->boxes['bottomMenu']);?>
-                        </div>
-                    </div>
-                    <div class="references">
-                        <?=$this->image('/assets/web/themes/Theme/images/reference1.jpg', 'reference', 'referenceItem'); ?>
-                        <?=$this->image('/assets/web/themes/Theme/images/reference2.jpg', 'reference', 'referenceItem'); ?>
-                        <?=$this->image('/assets/web/themes/Theme/images/reference3.jpg', 'reference', 'referenceItem'); ?>
-                    </div>
-                    <div class="facebook">
-                        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FLaschensky%2F192010854169157%3Ffref%3Dts&amp;width=290&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:290px; height:80px;" allowTransparency="true"></iframe>
-                    </div>
+                <div id="footer" class="webStandard">
+                    &copy; <?=date('Y')?>
                 </div>
             </div>
             <?=$this->includeCode('footer')?>
