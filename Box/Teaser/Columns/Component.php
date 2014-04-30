@@ -1,5 +1,5 @@
 <?php
-class Theme_Box_Teaser_Columns_Component extends Kwc_ColumnsResponsive_Component
+class Theme_Box_Teaser_Columns_Component extends Kwc_Columns_Component
 {
     public static function getSettings($parentComponentClass)
     {
