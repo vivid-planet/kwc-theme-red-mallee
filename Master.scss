@@ -38,11 +38,9 @@ html, body {
         }
     }
 
-    height: auto;
-    min-height: 100%;
+    height: 100%;
     position: relative;
     width: 100%;
-    overflow: hidden;
 
     #outerHeader {
         background: var(light);
@@ -238,26 +236,44 @@ html, body {
     }
 
     #outerContent {
-
+        height: auto;
+        overflow-x: hidden;
+        min-height: 100%;
         position: relative;
-
-        @include at-breakpoint(5 no-mediaqueries) {
-            padding-top:220px;
+        .stage {
+            padding-top: 0px;
+            @include at-breakpoint(5 no-mediaqueries) {
+                padding-top: 202px;
+            }
+            @include at-breakpoint(6 no-mediaqueries) {
+                padding-top: 157px;
+            }
+            @include at-breakpoint(8 no-mediaqueries) {
+                padding-top: 124px;
+            }
         }
-
-        @include at-breakpoint(8 no-mediaqueries) {
-            padding-top: 145px;
-        }
-
         #content {
-
             background: #fff;
             @include container;
             @include box-sizing(border-box);
-            padding: 40px 20px;
+            padding: 0px 20px 180px 20px;
+
+            @include at-breakpoint(5 no-mediaqueries) {
+                padding: 195px 20px 180px 20px;
+            }
+
+            @include at-breakpoint(6 no-mediaqueries) {
+                padding: 165px 20px 180px 20px;
+            }
 
             @include at-breakpoint(10 no-mediaqueries) {
-                padding: 40px 5px;
+                padding: 165px 0 180px;
+            }
+            &.hasStage {
+                padding: 20px 20px 180px 20px;
+                @include at-breakpoint(10 no-mediaqueries) {
+                    padding: 20px 0 180px 0;
+                }
             }
 
             .breadcrumbs {
@@ -375,38 +391,27 @@ html, body {
             }
         }
     }
-}
-
-#outerFooter {
-
-    min-height: 165px;
-    width: 100%;
-    background: #e1dfe0;
-    bottom: 0px;
-    position: relative;
-    z-index: 10;
-
-    #footer {
-        @include container;
-        padding: 0 20px;
-
-        @include at-breakpoint(10 no-mediaqueries) {
-            padding: 0px;
-        }
-
-
-        .topFooter {
-
+    #outerFooter {
+        height: 165px;
+        width: 100%;
+        background: #e1dfe0;
+        bottom: 0px;
+        position: relative;
+        margin-top: -165px;
+        #footer {
+            @include container;
+            padding: 0 20px;
+            @include at-breakpoint(10 no-mediaqueries) {
+                padding: 0px;
+            }
             @include pie-clearfix;
-
             .text {
                 padding-top: 20px;
                 text-align: center;
-                    @include at-breakpoint(8 no-mediaqueries) {
-                        text-align: left;
-                        float: left;
-                        margin-left: 20px;
-                    }
+                @include at-breakpoint(8 no-mediaqueries) {
+                    text-align: left;
+                    float: left;
+                }
                 p {
                     font-size: 13px;
                     color: #606060;
@@ -416,46 +421,14 @@ html, body {
                 padding-top: 20px;
                 display: table;
                 margin: auto;
-
                 @include at-breakpoint(8 no-mediaqueries) {
                     float: right;
-                    margin-right: 20px;
                 }
-
                 a {
                     font-size: 12px;
-
                 }
-            }
-        }
-        .references {
-            padding-top: 20px;
-
-            @include at-breakpoint(8 no-mediaqueries) {
-                float: left;
-            }
-            .referenceItem {
-                display: table;
-                margin: auto;
-
-                @include at-breakpoint(8 no-mediaqueries) {
-                    float: left;
-                    margin-left: 20px;
-                    padding-top: 40px;
-                }
-            }
-        }
-
-        .facebook {
-            display: table;
-            margin: auto;
-            padding-top: 40px;
-
-            @include at-breakpoint(8 no-mediaqueries) {
-                padding-top: 70px;
-                float: right;
-                margin-right: 20px;
             }
         }
     }
 }
+
