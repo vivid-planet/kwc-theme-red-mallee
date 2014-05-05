@@ -58,10 +58,12 @@
                 </div>
             </div>
             <div id="outerContent">
+                <? if($this->hasContent($this->boxes['stage'])) { ?>
                 <div class="stage">
                     <?=$this->component($this->boxes['stage']);?>
                 </div>
-                <div id="content">
+                <? } ?>
+                <div id="content" class="<? if($this->hasContent($this->boxes['stage'])) { ?>hasStage<? } ?>">
                     <div id="innerContent" class="<?=$contentClass?>">
                         <div class="leftColumn">
                             <?=$this->component($this->boxes['leftColumnBox']);?>
@@ -75,18 +77,20 @@
                         </div>
                     </div>
                 </div>
+                <? if($this->hasContent($this->boxes['teaserBelowContent'])) { ?>
                 <div class="teaserList">
                     <div class="innerTeaserList">
                         <?=$this->component($this->boxes['teaserBelowContent']);?>
                     </div>
                 </div>
+                <? } ?>
             </div>
             <div id="outerFooter">
                 <div id="footer" class="webStandard">
                     &copy; <?=date('Y')?>
                 </div>
             </div>
-            <?=$this->includeCode('footer')?>
         </div>
+        <?=$this->includeCode('footer')?>
     </body>
 </html>
