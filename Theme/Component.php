@@ -13,7 +13,7 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
     public static function getRootSettings()
     {
         $ret = array();
-        $ret['masterTemplate'] = 'themes/Theme/Master.tpl';
+        $ret['masterTemplate'] = dirname(__FILE__).'/Master.tpl';
         $ret['contentWidth'] = 1100;
         $ret['contentWidthBoxSubtract'] = array('subMenu' => 282);
         $ret['flags']['resetMaster'] = true;
@@ -126,11 +126,11 @@ class Theme_Component extends Kwf_Component_Theme_Abstract
 
         $ret['editComponents'] = array('title', 'metaTags', 'logo', 'openGraph', 'leftColumnBox', 'background', 'footerImage', 'mobileStage', 'stage', 'teaserBelowContent', 'rightBox', 'newsletterSubscribe');
 
-        $ret['assets']['files'][] = 'web/themes/Theme/Web.css';
-        $ret['assets']['files'][] = 'web/themes/Theme/Master.scss';
-        $ret['assets']['files'][] = 'web/themes/Theme/Web.scss';
+        $ret['assets']['files'][] = 'webTheme/Theme/Web.css';
+        $ret['assets']['files'][] = 'webTheme/Theme/Master.scss';
+        $ret['assets']['files'][] = 'webTheme/Theme/Web.scss';
         $ret['assets']['dep'][] = 'KwfStickyHeader';
-        $ret['assets']['files'][] = 'web/themes/Theme/Master.js';
+        $ret['assets']['files'][] = 'webTheme/Theme/Master.js';
         return $ret;
     }
 }
